@@ -1,41 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="10" passed="10">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="20800" started-at="2018-09-24T22:54:48Z" finished-at="2018-09-24T22:55:09Z">
+  <suite name="Surefire suite" duration-ms="35659" started-at="2018-09-24T21:07:32Z" finished-at="2018-09-24T21:08:08Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="20800" started-at="2018-09-24T22:54:48Z" finished-at="2018-09-24T22:55:09Z">
+    <test name="Surefire test" duration-ms="35659" started-at="2018-09-24T21:07:32Z" finished-at="2018-09-24T21:08:08Z">
       <class name="BonifyWebpageTest">
-        <test-method status="PASS" signature="init_driver()[pri:0, instance:BonifyWebpageTest@38082d64]" name="init_driver" is-config="true" duration-ms="4812" started-at="2018-09-24T22:54:48Z" finished-at="2018-09-24T22:54:53Z">
+        <test-method status="PASS" signature="init_driver()[pri:0, instance:BonifyWebpageTest@42d3bd8b]" name="init_driver" is-config="true" duration-ms="16833" started-at="2018-09-24T21:07:32Z" finished-at="2018-09-24T21:07:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init_driver -->
-        <test-method status="PASS" signature="webpage_wait()[pri:0, instance:BonifyWebpageTest@38082d64]" name="webpage_wait" is-config="true" duration-ms="250" started-at="2018-09-24T22:54:53Z" finished-at="2018-09-24T22:54:53Z">
+        <test-method status="PASS" signature="webpage_wait()[pri:0, instance:BonifyWebpageTest@42d3bd8b]" name="webpage_wait" is-config="true" duration-ms="250" started-at="2018-09-24T21:07:49Z" finished-at="2018-09-24T21:07:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- webpage_wait -->
-        <test-method status="PASS" signature="launch_webPage()[pri:0, instance:BonifyWebpageTest@38082d64]" name="launch_webPage" duration-ms="2504" started-at="2018-09-24T22:54:53Z" finished-at="2018-09-24T22:54:56Z">
+        <test-method status="PASS" signature="launch_webPage()[pri:0, instance:BonifyWebpageTest@42d3bd8b]" name="launch_webPage" duration-ms="1408" started-at="2018-09-24T21:07:49Z" finished-at="2018-09-24T21:07:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launch_webPage -->
-        <test-method status="PASS" signature="webpage_wait()[pri:0, instance:BonifyWebpageTest@38082d64]" name="webpage_wait" is-config="true" duration-ms="250" started-at="2018-09-24T22:54:56Z" finished-at="2018-09-24T22:54:56Z">
+        <test-method status="PASS" signature="webpage_wait()[pri:0, instance:BonifyWebpageTest@42d3bd8b]" name="webpage_wait" is-config="true" duration-ms="251" started-at="2018-09-24T21:07:51Z" finished-at="2018-09-24T21:07:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- webpage_wait -->
-        <test-method status="PASS" signature="verify_bonify_login()[pri:1, instance:BonifyWebpageTest@38082d64]" name="verify_bonify_login" duration-ms="2284" started-at="2018-09-24T22:54:56Z" finished-at="2018-09-24T22:54:59Z">
+        <test-method status="PASS" signature="verify_webpage()[pri:1, instance:BonifyWebpageTest@42d3bd8b]" name="verify_webpage" duration-ms="1041" started-at="2018-09-24T21:07:51Z" finished-at="2018-09-24T21:07:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_webpage -->
+        <test-method status="PASS" signature="webpage_wait()[pri:0, instance:BonifyWebpageTest@42d3bd8b]" name="webpage_wait" is-config="true" duration-ms="250" started-at="2018-09-24T21:07:52Z" finished-at="2018-09-24T21:07:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- webpage_wait -->
+        <test-method status="PASS" signature="verify_forgetPawrd()[pri:2, instance:BonifyWebpageTest@42d3bd8b]" name="verify_forgetPawrd" duration-ms="1544" started-at="2018-09-24T21:07:52Z" finished-at="2018-09-24T21:07:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_forgetPawrd -->
+        <test-method status="PASS" signature="webpage_wait()[pri:0, instance:BonifyWebpageTest@42d3bd8b]" name="webpage_wait" is-config="true" duration-ms="250" started-at="2018-09-24T21:07:54Z" finished-at="2018-09-24T21:07:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- webpage_wait -->
+        <test-method status="PASS" signature="verify_login_text()[pri:3, instance:BonifyWebpageTest@42d3bd8b]" name="verify_login_text" duration-ms="208" started-at="2018-09-24T21:07:54Z" finished-at="2018-09-24T21:07:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_login_text -->
+        <test-method status="PASS" signature="webpage_wait()[pri:0, instance:BonifyWebpageTest@42d3bd8b]" name="webpage_wait" is-config="true" duration-ms="251" started-at="2018-09-24T21:07:54Z" finished-at="2018-09-24T21:07:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- webpage_wait -->
+        <test-method status="PASS" signature="verify_newRegistration_button()[pri:4, instance:BonifyWebpageTest@42d3bd8b]" name="verify_newRegistration_button" duration-ms="1070" started-at="2018-09-24T21:07:54Z" finished-at="2018-09-24T21:07:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_newRegistration_button -->
+        <test-method status="PASS" signature="webpage_wait()[pri:0, instance:BonifyWebpageTest@42d3bd8b]" name="webpage_wait" is-config="true" duration-ms="250" started-at="2018-09-24T21:07:55Z" finished-at="2018-09-24T21:07:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- webpage_wait -->
+        <test-method status="PASS" signature="verify_Impressum_link()[pri:5, instance:BonifyWebpageTest@42d3bd8b]" name="verify_Impressum_link" duration-ms="2108" started-at="2018-09-24T21:07:56Z" finished-at="2018-09-24T21:07:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Impressum_link -->
+        <test-method status="PASS" signature="webpage_wait()[pri:0, instance:BonifyWebpageTest@42d3bd8b]" name="webpage_wait" is-config="true" duration-ms="250" started-at="2018-09-24T21:07:58Z" finished-at="2018-09-24T21:07:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- webpage_wait -->
+        <test-method status="PASS" signature="verify_AGB_link()[pri:6, instance:BonifyWebpageTest@42d3bd8b]" name="verify_AGB_link" duration-ms="2343" started-at="2018-09-24T21:07:58Z" finished-at="2018-09-24T21:08:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_AGB_link -->
+        <test-method status="PASS" signature="webpage_wait()[pri:0, instance:BonifyWebpageTest@42d3bd8b]" name="webpage_wait" is-config="true" duration-ms="250" started-at="2018-09-24T21:08:00Z" finished-at="2018-09-24T21:08:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- webpage_wait -->
+        <test-method status="PASS" signature="verify_Datenschutz_link()[pri:7, instance:BonifyWebpageTest@42d3bd8b]" name="verify_Datenschutz_link" duration-ms="2550" started-at="2018-09-24T21:08:01Z" finished-at="2018-09-24T21:08:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Datenschutz_link -->
+        <test-method status="PASS" signature="webpage_wait()[pri:0, instance:BonifyWebpageTest@42d3bd8b]" name="webpage_wait" is-config="true" duration-ms="251" started-at="2018-09-24T21:08:03Z" finished-at="2018-09-24T21:08:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- webpage_wait -->
+        <test-method status="PASS" signature="verify_Footer_text()[pri:8, instance:BonifyWebpageTest@42d3bd8b]" name="verify_Footer_text" duration-ms="162" started-at="2018-09-24T21:08:03Z" finished-at="2018-09-24T21:08:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Footer_text -->
+        <test-method status="PASS" signature="webpage_wait()[pri:0, instance:BonifyWebpageTest@42d3bd8b]" name="webpage_wait" is-config="true" duration-ms="250" started-at="2018-09-24T21:08:04Z" finished-at="2018-09-24T21:08:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- webpage_wait -->
+        <test-method status="PASS" signature="verify_bonify_login()[pri:9, instance:BonifyWebpageTest@42d3bd8b]" name="verify_bonify_login" duration-ms="2618" started-at="2018-09-24T21:08:04Z" finished-at="2018-09-24T21:08:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_bonify_login -->
-        <test-method status="PASS" signature="webpage_wait()[pri:0, instance:BonifyWebpageTest@38082d64]" name="webpage_wait" is-config="true" duration-ms="251" started-at="2018-09-24T22:54:59Z" finished-at="2018-09-24T22:54:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- webpage_wait -->
-        <test-method status="PASS" signature="use_frame()[pri:2, instance:BonifyWebpageTest@38082d64]" name="use_frame" duration-ms="10124" started-at="2018-09-24T22:54:59Z" finished-at="2018-09-24T22:55:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- use_frame -->
-        <test-method status="PASS" signature="close_driver()[pri:0, instance:BonifyWebpageTest@38082d64]" name="close_driver" is-config="true" duration-ms="290" started-at="2018-09-24T22:55:09Z" finished-at="2018-09-24T22:55:09Z">
+        <test-method status="PASS" signature="close_driver()[pri:0, instance:BonifyWebpageTest@42d3bd8b]" name="close_driver" is-config="true" duration-ms="1170" started-at="2018-09-24T21:08:06Z" finished-at="2018-09-24T21:08:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close_driver -->

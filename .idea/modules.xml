@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/bonify-login.iml" filepath="$PROJECT_DIR$/bonify-login.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BonifyLogin.iml" filepath="$PROJECT_DIR$/BonifyLogin.iml" />
     </modules>
   </component>
 </project>

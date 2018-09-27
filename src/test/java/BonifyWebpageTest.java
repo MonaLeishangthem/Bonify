@@ -41,14 +41,164 @@ public class BonifyWebpageTest {
     public void launch_webPage() {
         LOGGER.debug("Entering TEST:launch_webPage");
         open_browser.openBrowser(driver);
-        driver.manage().window().maximize();
         LOGGER.debug("Exiting TEST:launch_webPage");
     }
+
     /*
-* Test priotity 1
-* verify_bonify_login() - will verify the login and logout for bonify.
-* */
+    * Test priotity 1
+    * verify_webpage() - will verify if the launched webpage is correct.
+    * */
     @Test(priority = 1)
+    public void verify_webpage() throws InterruptedException {
+        LOGGER.debug("Entering TEST:verify_webpage");
+        Thread.sleep(100);
+        WebElement we_message = driver.findElement(By.cssSelector(BonifyConstants.WILKOMMEN));
+        open_browser.verify_webPage_text(0, 0, we_message, null); // Asserts
+        LOGGER.debug("Exiting TEST:verify_webpage");
+    }
+
+    /*
+    * Test priotity 2
+    * verify_forgetPawrd() - will verify the displayed text and button for forget password.
+    * */
+    @Test(priority = 2)
+    public void verify_forgetPawrd() throws InterruptedException {
+        LOGGER.debug("Entering TEST:verify_forgetPawrd");
+        WebElement we_message = driver.findElement(By.cssSelector(BonifyConstants.FORGOT_PWD));
+        open_browser.verify_webPage_text(1, 0, we_message, null);//Asserts
+
+        //get the url
+        we_message.click();
+        Thread.sleep(150);
+        String currentURL = driver.getCurrentUrl();
+        LOGGER.debug("Current URL :" + currentURL);
+        open_browser.verify_webPage_text(8, 0, null, currentURL);//Asserts
+        Thread.sleep(100);
+
+        for (int i = 0; i < 3; i++)
+            driver.navigate().back();
+        driver.navigate().refresh();
+        LOGGER.debug("Exiting TEST:verify_forgetPawrd");
+    }
+
+    /*
+    * Test priotity 3
+    * verify_login_text() - will verify the displayed text for login button.
+    * */
+    @Test(priority = 3)
+    public void verify_login_text() throws InterruptedException {
+        LOGGER.debug("Entering TEST:verify_login");
+        WebElement we_message = driver.findElement(By.cssSelector(BonifyConstants.LOGIN_BTN));
+        open_browser.verify_webPage_text(2, 0, we_message, null);//Asserts
+        LOGGER.debug("Exiting TEST:verify_login");
+    }
+
+    /*
+    * Test priotity 4
+    * verify_newRegistration_button() - will verify the displayed text and button for new registration.
+    * */
+    @Test(priority = 4)
+    public void verify_newRegistration_button() throws InterruptedException {
+        LOGGER.debug("Entering TEST:verify_newRegistration_button");
+        WebElement we_message = driver.findElement(By.cssSelector(BonifyConstants.NEU_RGTN_TEXT));
+        open_browser.verify_webPage_text(3, 0, we_message, null);//Asserts
+
+        //get the url
+        we_message = driver.findElement(By.cssSelector(BonifyConstants.NEU_RGTN_BTN));
+        we_message.click();
+        Thread.sleep(150);
+        String currentURL = driver.getCurrentUrl();
+        LOGGER.debug("Current URL :" + currentURL);
+        open_browser.verify_webPage_text(9, 0, null, currentURL);//Asserts
+
+        //return to my.bonify.de
+        driver.get(BonifyConstants.BONIFY_URL);
+        LOGGER.debug("Exiting TEST:verify_newRegistration_button");
+    }
+
+    /*
+    * Test priotity 5
+    * verify_Impressum_link() - will verify the displayed text and link for Impressum.
+    * */
+    @Test(priority = 5)
+    public void verify_Impressum_link() throws InterruptedException {
+        LOGGER.debug("Entering TEST:verify_Impressum_link");
+        WebElement we_message = driver.findElement(By.cssSelector(BonifyConstants.IMPRESSUM_TEXT));
+        open_browser.verify_webPage_text(4, 0, we_message, null);//Asserts
+
+        //get the url
+        we_message = driver.findElement(By.cssSelector(BonifyConstants.IMPRESSUM_LINK));
+        we_message.click();
+        Thread.sleep(100);
+        ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(1)); //switch to TAB #1
+        String currentURL = driver.getCurrentUrl();
+        LOGGER.debug("Current URL :" + currentURL);
+        open_browser.verify_webPage_text(10, 0, null, currentURL);//Asserts
+        driver.switchTo().window(tabs.get(0)); //switch to TAB #0
+        LOGGER.debug("Exiting TEST:verify_Impressum_link");
+    }
+
+    /*
+    * Test priotity 6
+    * verify_AGB_link() - will verify the displayed text and link for AGB.
+    * */
+    @Test(priority = 6)
+    public void verify_AGB_link() throws InterruptedException {
+        LOGGER.debug("Entering TEST:verify_AGB_link");
+        WebElement we_message = driver.findElement(By.cssSelector(BonifyConstants.AGB_TEXT));
+        open_browser.verify_webPage_text(5, 0, we_message, null);//Asserts
+
+        we_message = driver.findElement(By.cssSelector(BonifyConstants.AGB_LINK));
+        we_message.click();
+        Thread.sleep(900);
+        ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(2));//switch to TAB #2
+        String currentURL = driver.getCurrentUrl();
+        LOGGER.debug("Current URL :" + currentURL);
+        open_browser.verify_webPage_text(11, 0, null, currentURL);//Asserts
+        driver.switchTo().window(tabs.get(0));//switch to TAB #0
+        LOGGER.debug("Exiting TEST:verify_AGB_link");
+    }
+
+    /*
+    * Test priotity 7
+    * verify_Datenschutz_link() - will verify the displayed text and link for Datenschutz.
+    * */
+    @Test(priority = 7)
+    public void verify_Datenschutz_link() throws InterruptedException {
+        LOGGER.debug("Entering TEST:verify_Datenschutz_link");
+        WebElement we_message = driver.findElement(By.cssSelector(BonifyConstants.DATENSCHUTZ_TEXT));
+        open_browser.verify_webPage_text(6, 0, we_message, null);//Asserts
+        we_message = driver.findElement(By.cssSelector(BonifyConstants.DATENSCHUTZ_LINK));
+        we_message.click();
+        Thread.sleep(900);
+        ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(3));//switch to TAB #3
+        String currentURL = driver.getCurrentUrl();
+        LOGGER.debug("Current URL :" + currentURL);
+        open_browser.verify_webPage_text(12, 0, null, currentURL);//Asserts
+        driver.switchTo().window(tabs.get(0));//switch to TAB #0
+        LOGGER.debug("Exiting TEST:verify_Datenschutz_link");
+    }
+
+    /*
+    * Test priotity 8
+    * verify_Footer_text() - will verify the displayed text for footer.
+    * */
+    @Test(priority = 8)
+    public void verify_Footer_text() throws InterruptedException {
+        LOGGER.debug("Entering TEST:verify_Footer_text");
+        WebElement we_message = driver.findElement(By.cssSelector(BonifyConstants.FOOTER_TEXT));
+        open_browser.verify_webPage_text(7, 0, we_message, null);//Asserts
+        LOGGER.debug("Exiting TEST:verify_Footer_text");
+    }
+
+    /*
+    * Test priotity 9
+    * verify_bonify_login() - will verify the login and logout for bonify.
+    * */
+    @Test(priority = 9)
     public void verify_bonify_login() throws InterruptedException {
         LOGGER.debug("Entering TEST:verify_bonify_login");
         WebElement we_message = driver.findElement(By.cssSelector(BonifyConstants.EMAIL_TEXT_FIELD));
@@ -60,51 +210,35 @@ public class BonifyWebpageTest {
         we_message = driver.findElement(By.cssSelector(BonifyConstants.LOGIN_BTN_CLICK));
         we_message.click();
         Thread.sleep(1000);
-        LOGGER.debug("Exiting TEST:verify_bonify_login");
-    }
-    /*
-    * Test priotity 2
-    * use_frame() - will switch between frames in bonify.
-    * */
-    @Test(priority=2)
-    public void use_frame()throws InterruptedException {
-        LOGGER.debug("Entering TEST:use_frame");
-        Thread.sleep(1000);
-        WebElement we_message = driver.findElement(By.cssSelector(BonifyConstants.DEALS_BTN));
-        we_message.click(); //click to Angebote
 
-        Thread.sleep(5000);
-        //Frames
-        //int size = driver.findElements(By.tagName("iframe")).size();
-      //  System.out.println("3 iFrame ** - " + size);
-        // driver.switchTo().frame(driver.findElement(By.cssSelector("div.zopim:nth-child(1)")));
-
-        //Switch to Frame with index 0
-        driver.switchTo().frame(0);
-        Thread.sleep(3000);
-        we_message = driver.findElement(By.cssSelector(BonifyConstants.NACHRICHT_BTN));
-        we_message.click();
-
-        //logout
-        Thread.sleep(300);
-        driver.switchTo().defaultContent();
+        //verify that the login was successful
         we_message = driver.findElement(By.cssSelector(BonifyConstants.USR_EMAIL));
+        open_browser.verify_webPage_text(15, 0, we_message, null);//Asserts
+        LOGGER.info("Successfully logged into Bonify!");
+
+        //logout from bonify
         we_message.click();
         Thread.sleep(300);
         we_message = driver.findElement(By.cssSelector(BonifyConstants.LOGOUT_BTN));
         we_message.click();
-        LOGGER.debug("Existing TEST:use_frame");
+        LOGGER.info("Successfully logged out of Bonify!");
+        Thread.sleep(300);
+        LOGGER.debug("Exiting TEST:verify_bonify_login");
     }
+
+    /*
+    * Will be executed after the complete test suite.
+    * close_driver() - will close all tabs and the chrome driver.
+    * */
     @AfterTest
     public void close_driver() {
-        LOGGER.debug("Entering TEST:close_driver");
+        LOGGER.debug("Entering close_driver");
         for (int i = driver.getWindowHandles().size() - 1; i >= 0; i--) {
             String winHandle = driver.getWindowHandles().toArray()[i].toString();
             driver.switchTo().window(winHandle);
             driver.close();
         }
-        LOGGER.debug("Existing TEST:close_driver");
+        LOGGER.debug("Exiting close_driver");
     }
-
 }
 
