@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="20800" started-at="2018-09-24T22:54:48Z" finished-at="2018-09-24T22:55:09Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="20800" started-at="2018-09-24T22:54:48Z" finished-at="2018-09-24T22:55:09Z">
+      <class name="BonifyWebpageTest">
+        <test-method status="PASS" signature="init_driver()[pri:0, instance:BonifyWebpageTest@38082d64]" name="init_driver" is-config="true" duration-ms="4812" started-at="2018-09-24T22:54:48Z" finished-at="2018-09-24T22:54:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init_driver -->
+        <test-method status="PASS" signature="webpage_wait()[pri:0, instance:BonifyWebpageTest@38082d64]" name="webpage_wait" is-config="true" duration-ms="250" started-at="2018-09-24T22:54:53Z" finished-at="2018-09-24T22:54:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- webpage_wait -->
+        <test-method status="PASS" signature="launch_webPage()[pri:0, instance:BonifyWebpageTest@38082d64]" name="launch_webPage" duration-ms="2504" started-at="2018-09-24T22:54:53Z" finished-at="2018-09-24T22:54:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launch_webPage -->
+        <test-method status="PASS" signature="webpage_wait()[pri:0, instance:BonifyWebpageTest@38082d64]" name="webpage_wait" is-config="true" duration-ms="250" started-at="2018-09-24T22:54:56Z" finished-at="2018-09-24T22:54:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- webpage_wait -->
+        <test-method status="PASS" signature="verify_bonify_login()[pri:1, instance:BonifyWebpageTest@38082d64]" name="verify_bonify_login" duration-ms="2284" started-at="2018-09-24T22:54:56Z" finished-at="2018-09-24T22:54:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_bonify_login -->
+        <test-method status="PASS" signature="webpage_wait()[pri:0, instance:BonifyWebpageTest@38082d64]" name="webpage_wait" is-config="true" duration-ms="251" started-at="2018-09-24T22:54:59Z" finished-at="2018-09-24T22:54:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- webpage_wait -->
+        <test-method status="PASS" signature="use_frame()[pri:2, instance:BonifyWebpageTest@38082d64]" name="use_frame" duration-ms="10124" started-at="2018-09-24T22:54:59Z" finished-at="2018-09-24T22:55:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- use_frame -->
+        <test-method status="PASS" signature="close_driver()[pri:0, instance:BonifyWebpageTest@38082d64]" name="close_driver" is-config="true" duration-ms="290" started-at="2018-09-24T22:55:09Z" finished-at="2018-09-24T22:55:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close_driver -->
+      </class> <!-- BonifyWebpageTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
